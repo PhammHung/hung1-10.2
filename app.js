@@ -6,7 +6,7 @@ const path = require("path");
 const mongoose = require("mongoose");
 const studentModel = require("./models/StudentSchema");
 //const url = "mongodb://localhost:27017/";
-const url = "mongodb+srv://hungpm:<password>@cluster0.m0f6axx.mongodb.net/test "
+const url = "mongodb+srv://hungpm:Hungdepzai20@cluster0.m0f6axx.mongodb.net "
 mongoose.connect(url, { useNewUrlParser: true }, (err) => {
   if (err) {
     console.log(err);
