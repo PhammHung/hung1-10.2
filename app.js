@@ -5,7 +5,8 @@ const path = require("path");
 
 const mongoose = require("mongoose");
 const studentModel = require("./models/StudentSchema");
-const url = "mongodb://localhost:27017/greenwich";
+//const url = "mongodb://localhost:27017/";
+const url = "mongodb+srv://hungpm:<password>@cluster0.m0f6axx.mongodb.net/test "
 mongoose.connect(url, { useNewUrlParser: true }, (err) => {
   if (err) {
     console.log(err);
@@ -33,7 +34,9 @@ app.get("/student", (req, res) => {
       //1. show dữ liệu ra console log
       //console.log(data);
       //2. show dữ liệu ra web bằng "send"
-      res.send(data);
+      //res.send(data);
+      //3.show dữ liệu bằng render
+      res.render("student", { student: data});
     }
   });
 });
